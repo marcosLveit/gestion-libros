@@ -1,21 +1,20 @@
 <?php
 
-class Conexion{
-    protected $servername="localhost";
-    protected $database="biblioteca";
-    protected $username="root";
-    protected $password="";
+class Conexion
+{
     private $conexion = null;
 
-    function __construct()
+    public static function conectar()
     {
-        $this->conexion = new mysqli($this->servername, $this->username, $this->password, $this->database);
+        $conexion = new mysqli("localhost", "root", "", "biblioteca");
+        return $conexion;
     }
 
-    function query($query){
+    function query($query)
+    {
 
         $result = $this->conexion->query($query);
-        
+
         return $result->fetch_all(MYSQLI_ASSOC);
     }
 }

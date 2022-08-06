@@ -1,13 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title><?php echo $data["titulo"]; ?></title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
+
 <body>
-    <h1>prueba</h1>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos rerum cumque praesentium quia ipsum ullam soluta recusandae eveniet laudantium doloremque sit facere, quam culpa, unde sunt minima assumenda iusto ab.</p>
+
+    <h2><?php echo $data["titulo"]; ?></h2>
+
+
+    <table border="1" width="50%">
+        <thead>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Modelo</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <?php foreach ($data["libros"] as $dato) {
+                echo "<tr>";
+                echo "<td>" . $dato["id"] . "</td>";
+                echo "<td>" . $dato["nombre"] . "</td>";
+                echo "<td>" . $dato["idautor"] . "</td>";
+                echo "</tr>";
+            }
+            ?>
+        </tbody>
+
+    </table>
+
 </body>
+
 </html>
