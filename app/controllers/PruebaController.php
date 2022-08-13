@@ -1,10 +1,18 @@
 <?php
 
-namespace App\controllers;
-
 class PruebaController {
 
-    public function getIndex(){
-        return 'paso por el controlador';
+    public function __construct()
+    {
+      require_once "./app/models/libro.php";
+    }
+
+    public function getIndex()
+    {
+      $libros = new libros_model();
+      $data["titulo"] = "Libros";
+      $data["libros"] = $libros->get_libros();
+      
+      require_once "./views/home.php";
     }
 }

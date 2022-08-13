@@ -1,6 +1,7 @@
 <?php
 
 require_once 'vendor/autoload.php';
+require_once './conexion.php';
 
 use Phroute\Phroute\RouteCollector;
 use Phroute\Phroute\RouteParser;
@@ -29,3 +30,4 @@ catch(HttpMethodNotAllowedException $e){
 echo $response;
 
 ?>
+
