@@ -26,7 +26,7 @@
                         echo "<td class='border'>" . $dato["id"] . "</td>";
                         echo "<td class='border'>" . $dato["nombre"] . "</td>";
                         echo "<td class='border'>" . $dato["idautor"] . "</td>";
-                        echo "<td class='border'><a class='block w-1/2 p-px ml-4 text-xs text-center transition bg-indigo-500 rounded-md shadow-lg shadow-indigo-500/50 color-indigo-50' href=''>Ver</a></td>";
+                        echo "<td class='border'><a class='block w-1/2 p-px ml-4 text-xs text-center transition bg-indigo-500 rounded-md shadow-lg shadow-indigo-500/50 color-indigo-50' href='/libro/".$dato['id']."'>Ver</a></td>";
                         echo "</tr>";
                     }
                     ?>

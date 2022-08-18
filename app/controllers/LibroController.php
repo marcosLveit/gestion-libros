@@ -1,6 +1,6 @@
 <?php
 
-class PruebaController {
+class LibroController {
 
     public function __construct()
     {
@@ -10,9 +10,14 @@ class PruebaController {
     public function getIndex()
     {
       $libros = new libros_model();
-      $data["titulo"] = "Libros";
       $data["libros"] = $libros->get_libros();
       
       require_once "./views/home.php";
+    }
+
+    public function getLibro($id){
+      $libros = new libros_model();
+      $data = $libros->get_libro($id);
+      require_once "./views/ver_libro.php";
     }
 }

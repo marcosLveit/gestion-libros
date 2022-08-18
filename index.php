@@ -26,7 +26,6 @@ catch(HttpMethodNotAllowedException $e){
     echo $e->getMessage();
     die();
 }
-
 echo $response;
 
 ?>

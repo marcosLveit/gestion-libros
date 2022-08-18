@@ -20,4 +20,12 @@ class libros_model
         }
         return $this->libros;
     }
+
+    public function get_libro($id)
+    {
+        $sql = "SELECT * FROM libro WHERE id=$id";
+        $resultado = $this->db->query($sql);
+        $row = $resultado->fetch_assoc();
+        return $row;
+    }
 }
